@@ -27,7 +27,8 @@ export default function StudentDashboard() {
           </div>
         </div>
         
-        <div className="flex flex-col gap-2 p-4 bg-white border border-slate-100 rounded-xl min-w-[250px] shadow-sm">
+        <div className="flex flex-col gap-2 p-4 bg-white border border-slate-100 rounded-xl w-full md:min-w-[250px] shadow-sm">
+
           <div className="flex justify-between text-sm font-medium">
             <span className="text-slate-700">Profil complété</span>
             <span className="text-primary">{student.profileCompletion}%</span>
@@ -42,7 +43,13 @@ export default function StudentDashboard() {
         <section className="space-y-4 md:col-span-2">
           <div className="flex items-center justify-between">
             <h2 className="text-xl font-semibold tracking-tight text-slate-900">Offres recommandées</h2>
-            <button className="text-sm font-medium text-primary hover:underline">Voir tout</button>
+            <button
+              type="button"
+              className="text-sm font-medium text-primary hover:underline focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-ring/50 rounded"
+            >
+              Voir tout
+            </button>
+
           </div>
           
           {recommendedOffers.length > 0 ? (

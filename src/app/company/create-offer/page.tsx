@@ -290,7 +290,8 @@ export default function CreateOfferWizard() {
                         <h3 className="text-sm font-medium text-slate-500">Titre</h3>
                         <p className="text-lg font-semibold text-slate-900">{form.getValues('title')}</p>
                       </div>
-                      <div className="grid grid-cols-2 gap-4">
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+
                         <div>
                           <h3 className="text-sm font-medium text-slate-500">Contrat</h3>
                           <Badge variant="secondary" className="mt-1">{form.getValues('contractType')}</Badge>

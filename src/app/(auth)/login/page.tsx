@@ -7,24 +7,25 @@ import { Checkbox } from '@/components/ui/checkbox';
 export default function LoginPage() {
   return (
     <>
-      <div>
-        <div className="flex items-center gap-2 mb-8 text-2xl font-bold tracking-tight text-primary">
-          <div className="w-8 h-8 rounded-lg bg-primary"></div>
+      <div className="px-4 sm:px-6">
+        <div className="flex items-center gap-2 mb-6 text-xl sm:text-2xl font-bold tracking-tight text-primary">
+          <div className="w-8 h-8 rounded-lg bg-primary" aria-hidden="true" />
           BridgeUp
         </div>
-        <h2 className="text-2xl font-bold leading-9 tracking-tight text-slate-900">
+        <h2 className="text-2xl sm:text-3xl font-bold leading-9 tracking-tight text-slate-900">
           Connexion à votre compte
         </h2>
-        <p className="mt-2 text-sm text-slate-500">
+        <p className="mt-2 text-sm sm:text-base text-slate-500">
           Pas encore de compte ?{' '}
           <Link href="/register" className="font-semibold text-primary hover:text-primary/80">
-            S'inscrire
+            S&apos;inscrire
           </Link>
         </p>
       </div>
 
-      <div className="mt-10">
+      <div className="mt-6 sm:mt-10 px-4 sm:px-6">
         <form className="space-y-6">
+
           <div>
             <Label htmlFor="email">Adresse email</Label>
             <div className="mt-2">
@@ -43,10 +44,14 @@ export default function LoginPage() {
             <div className="flex items-center justify-between">
               <Label htmlFor="password">Mot de passe</Label>
               <div className="text-sm">
-                <Link href="/forgot-password" className="font-semibold text-primary hover:text-primary/80">
-                  Mot de passe oublié ?
-                </Link>
+                <button
+                  type="button"
+                  className="font-semibold text-primary hover:text-primary/80 focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-ring/50 rounded"
+                >
+                  Mot de passe oubli&eacute; ?
+                </button>
               </div>
+
             </div>
             <div className="mt-2">
               <Input
